@@ -5,12 +5,14 @@ import reportWebVitals from "./reportWebVitals";
 import V1 from "./V1";
 import V2 from "./V2";
 import V3 from "./V3";
+import V4 from "./V4";
 
 ReactDOM.render(
   <React.StrictMode>
     <V1 />
     <V2 />
     <V3 />
+    <V4 />
   </React.StrictMode>,
   document.querySelector("#root")
 );
