@@ -1,4 +1,6 @@
-import { useStackV4 } from "./useStackV4";
+// useLocalHistoryV5 is same to useLocalHistoryV4
+
+import { useStackV5 } from "./useStackV5";
 
 export interface LocalHistory {
   Top: () => void;
@@ -8,12 +10,12 @@ export interface LocalHistory {
   Reset: () => void;
 }
 
-export const useLocalHistoryV4 = (
+export const useLocalHistoryV5 = (
   topPage: number,
   lastPage: number
 ): [number, LocalHistory] => {
   const initHistory: number[] = [topPage];
-  const [currentPage, stack] = useStackV4<number>(initHistory);
+  const [currentPage, stack] = useStackV5<number>(initHistory);
   const Top = (): void => {
     if (currentPage === topPage) {
       return;
